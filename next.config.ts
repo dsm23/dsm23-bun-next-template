@@ -1,7 +1,19 @@
+import withBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
+import { env } from "./env";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+const fn = () => {
+  const plugins = [withBundleAnalyzer({ enabled: env.ANALYZE })];
+
+  const config = plugins.reduce((acc, next) => next(acc), {
+    ...nextConfig,
+  });
+
+  return config;
+};
+
+export default fn;
