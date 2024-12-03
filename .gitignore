@@ -29,6 +29,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# cache Files
+.eslintcache
+.eslintmdcache
+.stylelintcache
+.prettiercache
+
 # env files (can opt-in for committing if needed)
 .env*
 
