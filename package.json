@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "node .husky/install.js",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -30,6 +31,8 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "gzip-size": "^7.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "mkdirp": "^3.0.1",
     "nextjs-bundle-analysis": "^0.5.0",
     "postcss": "^8",
