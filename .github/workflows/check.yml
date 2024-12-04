@@ -31,8 +31,8 @@ jobs:
         run: bun run lint
       - name: Format check
         run: bun run fmt.check
-      # - name: Unit & Integration tests
-      #   run: bun run test -- --coverage
+      - name: Unit & Integration tests
+        run: bun run test --coverage
       - name: Build
         run: bun run build
       # - name: Smoke & Acceptance tests
