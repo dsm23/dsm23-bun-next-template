@@ -56,7 +56,7 @@ jobs:
       # Here's the first place where next-bundle-analysis' own script is used
       # This step pulls the raw bundle stats for the current bundle
       - name: Analyze bundle
-        run: node ./scripts/report-bundle-size.js
+        run: bun run ./scripts/report-bundle-size.js
 
       - name: Upload bundle
         uses: actions/upload-artifact@v4
@@ -87,7 +87,8 @@ jobs:
       # entry in your package.json file.
       - name: Compare with base branch bundle
         if: success() && github.event.number
-        run: ls -laR .next/analyze/base && pnpm --package=nextjs-bundle-analysis dlx compare
+        # compare binary is from nextjs-bundle-analysis
+        run: ls -laR .next/analyze/base && bunx compare
 
       - name: Get comment body
         id: get-comment-body
