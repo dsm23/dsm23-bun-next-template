@@ -5,7 +5,8 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "joshbolduc.commitlint",
-    "ms-playwright.playwright"
+    "ms-playwright.playwright",
+    "stylelint.vscode-stylelint"
   ],
   "unwantedRecommendations": []
 }
