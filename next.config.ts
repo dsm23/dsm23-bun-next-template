@@ -4,6 +4,11 @@ import { env } from "./env";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
   async rewrites() {
     return await [
       { source: "/healthz", destination: "/api/health" },

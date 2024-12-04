@@ -10,7 +10,8 @@
     "start": "next start",
     "fmt": "prettier . --write --cache --cache-strategy=content --cache-location=.prettiercache",
     "fmt.check": "prettier . --check --cache --cache-strategy=content --cache-location=.prettiercache",
-    "lint:js": "next lint",
+    "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0 --cache",
+    "lint:md": "eslint \"**/*.md?(x)\" --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy=content --cache-location=.eslintmdcache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
     "lint": "run-s lint:js lint:css"
   },
@@ -31,14 +32,19 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/types": "^19.5.0",
+    "@eslint/compat": "^1.2.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@next/bundle-analyzer": "^15.0.3",
     "@playwright/test": "^1.49.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "eslint": "^9.16.0",
     "eslint-config-next": "15.0.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mdx": "^3.1.5",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "globals": "^15.13.0",
     "gzip-size": "^7.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
@@ -54,6 +60,7 @@
     "stylelint-order": "^6.0.4",
     "stylelint-selector-bem-pattern": "^4.0.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.17.0"
   }
 }
