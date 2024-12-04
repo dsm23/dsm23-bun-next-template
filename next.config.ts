@@ -4,6 +4,14 @@ import { env } from "./env";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return await [
+      { source: "/healthz", destination: "/api/health" },
+      { source: "/api/healthz", destination: "/api/health" },
+      { source: "/health", destination: "/api/health" },
+      { source: "/ping", destination: "/api/health" },
+    ];
+  },
 };
 
 const fn = () => {
