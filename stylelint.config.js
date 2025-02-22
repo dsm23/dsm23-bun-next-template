@@ -2,10 +2,15 @@
 const CUSTOM_AT_RULES = [
   // Tailwind-specific at-rules
   "apply",
+  "custom-variant",
   "layer",
+  "plugin",
   "responsive",
   "screen",
+  "source",
   "tailwind",
+  "theme",
+  "utility",
   "variants",
   // PostCSS-specific at-rules
   "define-mixin",
@@ -55,9 +60,7 @@ export default {
           "left",
         ],
       },
-      {
-        properties: ["visibility", "float", "clear"],
-      },
+      { properties: ["visibility", "float", "clear"] },
       {
         properties: [
           "flex",

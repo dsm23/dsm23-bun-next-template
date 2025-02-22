@@ -10,7 +10,7 @@ import react from "eslint-plugin-react";
 import globals from "globals";
 import ts from "typescript-eslint";
 
-import tailwind from "eslint-plugin-tailwindcss";
+// import tailwind from "eslint-plugin-tailwindcss";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,60 +45,40 @@ export default ts.config(
   ...ts.configs.stylisticTypeChecked,
   react.configs.flat["jsx-runtime"],
   prettier,
-  ...tailwind.configs["flat/recommended"],
+  // ...tailwind.configs["flat/recommended"],
   ...compatConfig,
   {
     files: ["**/*.{js,md,mdx,mjs,ts,tsx}"],
-    rules: {
-      "@next/next/no-duplicate-head": "off",
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
+    rules: { "@next/next/no-duplicate-head": "off" },
+    settings: { react: { version: "detect" } },
   },
-  {
-    files: ["!**/src/**"],
-    ...ts.configs.disableTypeChecked,
-  },
+  { files: ["!**/src/**"], ...ts.configs.disableTypeChecked },
   {
     files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     rules: {
       "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/consistent-type-imports": [
         "error",
-        {
-          prefer: "type-imports",
-        },
+        { prefer: "type-imports" },
       ],
       "@typescript-eslint/no-confusing-void-expression": "off",
       "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-misused-promises": [
         "error",
-        {
-          checksVoidReturn: false,
-        },
+        { checksVoidReturn: false },
       ],
       "@typescript-eslint/non-nullable-type-assertion-style": "off",
       "@typescript-eslint/restrict-template-expressions": [
         "error",
-        {
-          allowNumber: true,
-          allowBoolean: true,
-        },
+        { allowNumber: true, allowBoolean: true },
       ],
       "@typescript-eslint/triple-slash-reference": [
         "error",
-        {
-          types: "prefer-import",
-        },
+        { types: "prefer-import" },
       ],
       "no-console": [
         "error",
-        {
-          allow: ["debug", "error", "info", "trace", "warn"],
-        },
+        { allow: ["debug", "error", "info", "trace", "warn"] },
       ],
       "tailwindcss/no-custom-classname": "off",
     },
