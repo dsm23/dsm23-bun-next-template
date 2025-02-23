@@ -37,9 +37,6 @@ jobs:
       - name: Lint check
         run: bun run lint
 
-      - name: Format check
-        run: bun run fmt.check
-
       - name: Unit & Integration tests
         run: bun run test --coverage
 

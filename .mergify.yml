@@ -7,10 +7,11 @@ pull_request_rules:
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=16"
+      - "#check-success>=17"
     actions:
       review:
         type: APPROVE
@@ -22,10 +23,11 @@ pull_request_rules:
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=16"
+      - "#check-success>=17"
     actions:
       review:
         type: APPROVE
@@ -37,10 +39,11 @@ pull_request_rules:
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
+      - check-success=format
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=16"
+      - "#check-success>=17"
       - "#approved-reviews-by>=1"
     actions:
       merge:
