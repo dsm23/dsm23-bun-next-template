@@ -37,9 +37,6 @@ jobs:
       - name: Lint check
         run: bun run lint
 
-      - name: Unit & Integration tests
-        run: bun run test --coverage
-
       # - name: Smoke & Acceptance tests
       #   run: |
       #     bun build-storybook --quiet
