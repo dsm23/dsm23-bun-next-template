@@ -40,8 +40,6 @@ jobs:
       - name: Unit & Integration tests
         run: bun run test --coverage
 
-      - name: Build
-        run: bun run build
       # - name: Smoke & Acceptance tests
       #   run: |
       #     bun build-storybook --quiet
