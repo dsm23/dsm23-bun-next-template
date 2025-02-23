@@ -4,6 +4,7 @@ pull_request_rules:
     conditions:
       - author=dsm23
       - check-success=analyze-bundle
+      - check-success=build
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
@@ -11,7 +12,7 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=17"
+      - "#check-success>=18"
     actions:
       review:
         type: APPROVE
@@ -20,6 +21,7 @@ pull_request_rules:
     conditions:
       - author=renovate[bot]
       - check-success=analyze-bundle
+      - check-success=build
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
@@ -27,7 +29,7 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=17"
+      - "#check-success>=18"
     actions:
       review:
         type: APPROVE
@@ -36,6 +38,7 @@ pull_request_rules:
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
       - check-success=analyze-bundle
+      - check-success=build
       - check-success=check
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
@@ -43,7 +46,7 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=zizmor
-      - "#check-success>=17"
+      - "#check-success>=18"
       - "#approved-reviews-by>=1"
     actions:
       merge:
