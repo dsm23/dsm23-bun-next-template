@@ -60,7 +60,7 @@ jobs:
       # Here's the first place where next-bundle-analysis' own script is used
       # This step pulls the raw bundle stats for the current bundle
       - name: Analyze bundle
-        run: bun run ./scripts/report-bundle-size.js
+        run: bun run ./scripts/reportBundleSize.js
 
       - name: Upload bundle
         uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
