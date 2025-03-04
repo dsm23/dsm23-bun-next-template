@@ -94,16 +94,14 @@ jobs:
         # compare binary is from nextjs-bundle-analysis
         run: ls -laR .next/analyze/base && bunx compare
 
-      - name: Get comment body
+      - name: Get Comment Body
         id: get-comment-body
         if: success() && github.event.number
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
-        with:
-          result-encoding: string
-          script: |
-            const fs = require('fs')
-            const comment = fs.readFileSync('.next/analyze/__bundle_analysis_comment.txt', 'utf8')
-            core.setOutput('body', comment)
+        # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
+        run: |
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
+          echo EOF >> $GITHUB_OUTPUT
 
       - name: Find Comment
         uses: peter-evans/find-comment@3eae4d37986fb5a8592848f6a574fdf654e61f9e # v3.1.0
@@ -111,7 +109,7 @@ jobs:
         id: fc
         with:
           issue-number: ${{ github.event.number }}
-          body-includes: "<!-- __NEXTJS_BUNDLE -->"
+          body-includes: "Next.js Bundle Analysis"
 
       - name: Create Comment
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 # v4.0.0
