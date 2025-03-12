@@ -57,7 +57,7 @@
     "globals": "16.0.0",
     "gzip-size": "7.0.0",
     "husky": "9.1.7",
-    "lint-staged": "15.4.3",
+    "lint-staged": "15.5.0",
     "nextjs-bundle-analysis": "0.5.0",
     "npm-run-all2": "7.0.2",
     "postcss": "8.5.3",
