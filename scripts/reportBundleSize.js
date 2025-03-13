@@ -9,7 +9,11 @@ import { readFile } from "fs/promises";
 import fs from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { gzipSizeSync } from "gzip-size";
+import zlib from "node:zlib";
+
+function gzipSizeSync(input, options) {
+  return zlib.gzipSync(input, { level: 9, ...options }).length;
+}
 
 // Pull options from `package.json`
 const options = await getOptions();
