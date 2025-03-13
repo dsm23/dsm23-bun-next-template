@@ -13,7 +13,7 @@ WORKDIR /app
 ENV HUSKY=0
 
 # Install dependencies based on the preferred package manager
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 # for the sake of the prepare script
 COPY .husky/ ./.husky/
 
