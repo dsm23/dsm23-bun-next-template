@@ -9,12 +9,14 @@
 name: Review Dependencies
 
 on:
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
 permissions:
   contents: read
+  # Write permissions for pull-requests are required for using the `comment-summary-in-pr` option, comment out if you aren't using this option
+  pull-requests: write
 
 jobs:
   dependency-review:
@@ -32,3 +34,5 @@ jobs:
 
       - name: Review Dependencies
         uses: actions/dependency-review-action@3b139cfc5fae8b618d3eae3675e383bb1769c019 # v4.5.0
+        with:
+          comment-summary-in-pr: always
