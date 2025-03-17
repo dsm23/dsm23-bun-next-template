@@ -38,7 +38,7 @@
     "@happy-dom/global-registrator": "17.4.4",
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
     "@next/bundle-analyzer": "15.2.2",
-    "@playwright/test": "1.51.0",
+    "@playwright/test": "1.51.1",
     "@tailwindcss/postcss": "4.0.14",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
