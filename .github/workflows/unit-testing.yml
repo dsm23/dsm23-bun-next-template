@@ -45,4 +45,6 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Unit & Integration tests
-        run: bun run test --coverage
+        run: bun test --coverage
+        env:
+          FORCE_COLOR: 1
