@@ -43,6 +43,9 @@
       "matchUpdateTypes": ["digest", "patch", "minor", "major"]
     }
   ],
+  "patch": {
+    "rebaseWhen": "behind-base-branch"
+  },
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
 }
