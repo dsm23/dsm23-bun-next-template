@@ -1,7 +1,7 @@
 # syntax=docker.io/docker/dockerfile:1@sha256:4c68376a702446fc3c79af22de146a148bc3367e73c25a5803d453b6b3f722fb
 
-FROM oven/bun:1.2.6-alpine@sha256:039a0f94f9b59fb0cef929cc66b7199c3af5ca384eab2af9284a3a61b322135c AS base
-FROM oven/bun:1.2.6-slim@sha256:90c7eede765bc68be893b9bf19acb57aaf9a47ba6bf44931faaddc7c3fd3e05a AS slim
+FROM oven/bun:1.2.7-alpine@sha256:711890300bfd97cf513184aa296241ba5c058906a3d8203ccc0ec102af55f5df AS base
+FROM oven/bun:1.2.7-slim@sha256:768a564a8dad682c7d337de6adec10cdb9f887c6ad0a5b496980f8e80894ad39 AS slim
 # FROM oven/bun:1.2.3-slim AS base
 
 # Install dependencies only when needed
