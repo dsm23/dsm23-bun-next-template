@@ -1,11 +1,9 @@
 # syntax=docker.io/docker/dockerfile:1@sha256:4c68376a702446fc3c79af22de146a148bc3367e73c25a5803d453b6b3f722fb
 
 FROM oven/bun:1.2.7-alpine@sha256:711890300bfd97cf513184aa296241ba5c058906a3d8203ccc0ec102af55f5df AS base
-FROM oven/bun:1.2.7-slim@sha256:768a564a8dad682c7d337de6adec10cdb9f887c6ad0a5b496980f8e80894ad39 AS slim
-# FROM oven/bun:1.2.3-slim AS base
 
 # Install dependencies only when needed
-FROM slim AS deps
+FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 # RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -20,7 +18,7 @@ COPY .husky/ ./.husky/
 RUN bun install --frozen-lockfile
 
 # Rebuild the source code only when needed
-FROM slim AS builder
+FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -59,4 +57,4 @@ ENV PORT=3000
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 ENV HOSTNAME="0.0.0.0"
-CMD ["node", "server.js"]
+CMD ["bun", "run", "server.js"]
