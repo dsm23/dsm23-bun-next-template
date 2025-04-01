@@ -37,7 +37,7 @@
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
     "@commitlint/types": "19.8.0",
-    "@eslint/compat": "1.2.7",
+    "@eslint/compat": "1.2.8",
     "@eslint/js": "9.23.0",
     "@happy-dom/global-registrator": "17.4.4",
     "@ianvs/prettier-plugin-sort-imports": "4.4.1",
