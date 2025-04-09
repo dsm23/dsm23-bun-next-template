@@ -1,6 +1,6 @@
 # syntax=docker.io/docker/dockerfile:1@sha256:4c68376a702446fc3c79af22de146a148bc3367e73c25a5803d453b6b3f722fb
 
-FROM oven/bun:1.2.8-alpine@sha256:60179f5ab9a193228941d94b6e0570f152aea0ac092d5df14f4f2c4fbd8f3ca8 AS base
+FROM oven/bun:1.2.9-alpine@sha256:395f8524ee2eaad681a70846afdc63afa7f57e8f8e91935e12106c5daab592c0 AS base
 
 # Install dependencies only when needed
 FROM base AS deps
