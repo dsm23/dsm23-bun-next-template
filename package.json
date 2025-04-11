@@ -48,7 +48,7 @@
     "@testing-library/react": "16.3.0",
     "@total-typescript/ts-reset": "0.6.1",
     "@types/bun": "1.2.9",
-    "@types/node": "22.14.0",
+    "@types/node": "22.14.1",
     "@types/react": "19.1.1",
     "@types/react-dom": "19.1.2",
     "commitizen": "4.3.1",
