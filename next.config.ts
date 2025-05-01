@@ -3,6 +3,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  compiler:
+    process.env.NODE_ENV !== "production"
+      ? {}
+      : {
+          removeConsole: {
+            exclude: ["error", "warn"],
+          },
+        },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
