@@ -1,4 +1,4 @@
-# syntax=docker.io/docker/dockerfile:1@sha256:4c68376a702446fc3c79af22de146a148bc3367e73c25a5803d453b6b3f722fb
+# syntax=docker.io/docker/dockerfile:1@sha256:9857836c9ee4268391bb5b09f9f157f3c91bb15821bb77969642813b0d00518d
 
 FROM oven/bun:1.2.12-alpine@sha256:d56cd65ffd4101fe999eb6940e3bfe2a59d9bd021cdb9bca3305267b6cff0b79 AS base
 
