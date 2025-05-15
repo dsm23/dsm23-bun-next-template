@@ -16,10 +16,10 @@
     "lint": "run-s lint:js lint:css"
   },
   "dependencies": {
-    "@opentelemetry/exporter-trace-otlp-http": "0.200.0",
-    "@opentelemetry/resources": "2.0.0",
-    "@opentelemetry/sdk-node": "0.200.0",
-    "@opentelemetry/sdk-trace-node": "2.0.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.201.0",
+    "@opentelemetry/resources": "2.0.1",
+    "@opentelemetry/sdk-node": "0.201.0",
+    "@opentelemetry/sdk-trace-node": "2.0.1",
     "@opentelemetry/semantic-conventions": "1.33.0",
     "@radix-ui/react-slot": "1.2.2",
     "@vercel/otel": "1.12.0",
