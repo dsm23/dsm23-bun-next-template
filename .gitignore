@@ -10,9 +10,16 @@
 !.yarn/releases
 !.yarn/versions
 
-# setting folder
-.vscode/settings.json
-.idea/
+# editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # testing
 /coverage
