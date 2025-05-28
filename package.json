@@ -72,6 +72,7 @@
     "stylelint-order": "7.0.0",
     "stylelint-selector-bem-pattern": "4.0.1",
     "tailwindcss": "4.1.7",
+    "typed-query-selector": "2.12.0",
     "typescript": "5.8.3",
     "typescript-eslint": "8.33.0"
   }
