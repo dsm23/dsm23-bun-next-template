@@ -11,7 +11,7 @@
         "@opentelemetry/semantic-conventions": "1.34.0",
         "@radix-ui/react-dropdown-menu": "2.1.15",
         "@radix-ui/react-slot": "1.2.3",
-        "@vercel/otel": "1.12.0",
+        "@vercel/otel": "1.13.0",
         "class-variance-authority": "0.7.1",
         "clsx": "2.1.1",
         "lucide-react": "0.513.0",
@@ -530,7 +530,7 @@
 
     "@typescript-eslint/visitor-keys": ["@typescript-eslint/visitor-keys@8.33.0", "", { "dependencies": { "@typescript-eslint/types": "8.33.0", "eslint-visitor-keys": "^4.2.0" } }, "sha512-7RW7CMYoskiz5OOGAWjJFxgb7c5UNjTG292gYhWeOAcFmYCtVCSqjqSBj5zMhxbXo2JOW95YYrUWJfU0zrpaGQ=="],
 
-    "@vercel/otel": ["@vercel/otel@1.12.0", "", { "peerDependencies": { "@opentelemetry/api": "^1.7.0", "@opentelemetry/api-logs": ">=0.46.0 && <1.0.0", "@opentelemetry/instrumentation": ">=0.46.0 && <1.0.0", "@opentelemetry/resources": "^1.19.0", "@opentelemetry/sdk-logs": ">=0.46.0 && <1.0.0", "@opentelemetry/sdk-metrics": "^1.19.0", "@opentelemetry/sdk-trace-base": "^1.19.0" } }, "sha512-KiTlMvJf6tjxcJUlpU1u7o1YpTddhx+aLhJ6Obn9dExr3ykVp5Lzi4ACET029TCzJ63NBzcF641rGMZly6x4aw=="],
+    "@vercel/otel": ["@vercel/otel@1.13.0", "", { "peerDependencies": { "@opentelemetry/api": ">=1.7.0 <2.0.0", "@opentelemetry/api-logs": ">=0.46.0 <0.200.0", "@opentelemetry/instrumentation": ">=0.46.0 <0.200.0", "@opentelemetry/resources": ">=1.19.0 <2.0.0", "@opentelemetry/sdk-logs": ">=0.46.0 <0.200.0", "@opentelemetry/sdk-metrics": ">=1.19.0 <2.0.0", "@opentelemetry/sdk-trace-base": ">=1.19.0 <2.0.0" } }, "sha512-esRkt470Y2jRK1B1g7S1vkt4Csu44gp83Zpu8rIyPoqy2BKgk4z7ik1uSMswzi45UogLHFl6yR5TauDurBQi4Q=="],
 
     "JSONStream": ["JSONStream@1.3.5", "", { "dependencies": { "jsonparse": "^1.2.0", "through": ">=2.2.7 <3" }, "bin": { "JSONStream": "./bin.js" } }, "sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ=="],
 
