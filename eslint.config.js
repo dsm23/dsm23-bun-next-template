@@ -10,8 +10,6 @@ import react from "eslint-plugin-react";
 import globals from "globals";
 import ts from "typescript-eslint";
 
-// import tailwind from "eslint-plugin-tailwindcss";
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const gitignorePath = path.resolve(__dirname, ".gitignore");
@@ -45,7 +43,6 @@ export default ts.config(
   ...ts.configs.stylisticTypeChecked,
   react.configs.flat["jsx-runtime"],
   prettier,
-  // ...tailwind.configs["flat/recommended"],
   ...compatConfig,
   {
     files: ["**/*.{js,md,mdx,mjs,ts,tsx}"],
