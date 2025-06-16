@@ -12,7 +12,7 @@
     "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0 --cache",
     "lint:md": "eslint \"**/*.md?(x)\" --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy=content --cache-location=.eslintmdcache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
-    "lint": "run-s lint:js lint:css"
+    "lint": "run-p lint:js lint:css"
   },
   "dependencies": {
     "@opentelemetry/exporter-trace-otlp-http": "0.202.0",
