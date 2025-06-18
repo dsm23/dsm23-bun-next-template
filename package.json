@@ -58,6 +58,7 @@
     "eslint-config-next": "15.3.3",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-mdx": "3.5.0",
+    "fast-check": "4.1.1",
     "globals": "16.2.0",
     "lefthook": "1.11.14",
     "nextjs-bundle-analysis": "0.5.0",
