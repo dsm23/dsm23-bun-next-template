@@ -1,8 +1,8 @@
 // whitespace-pre to preserve double spaces. An example occurs on seed 1413643214
 
+import { describe, expect, it } from "bun:test";
 import crypto from "node:crypto";
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "bun:test";
 import fc from "fast-check";
 import { cn } from "~/utils";
 import { Button } from ".";

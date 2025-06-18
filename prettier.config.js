@@ -12,6 +12,8 @@ export default {
     "<TYPES>^(clsx)",
     "^@*next",
     "<TYPES>^(@*next)",
+    "^bun",
+    "<TYPES>^(bun)",
     "<BUILTIN_MODULES>",
     "<TYPES>^(node:)",
     "<THIRD_PARTY_MODULES>",
@@ -24,6 +26,6 @@ export default {
     "^(?!.*[.]css$)[./].*$",
     ".css$",
   ],
-  importOrderTypeScriptVersion: "5.7.2",
+  importOrderTypeScriptVersion: "5.8.3",
   tailwindFunctions: ["clsx", "cn", "cva", "cx"],
 };
