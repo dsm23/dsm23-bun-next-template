@@ -21,6 +21,9 @@
 *.sln
 *.sw?
 
+# lefthook
+lefthook-local.yml
+
 # testing
 /coverage
 
