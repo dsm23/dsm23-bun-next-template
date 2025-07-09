@@ -26,6 +26,7 @@ export default {
     "^(?!.*[.]css$)[./].*$",
     ".css$",
   ],
+  // renovate: datasource=npm depName=typescript
   importOrderTypeScriptVersion: "5.8.3",
   tailwindFunctions: ["clsx", "cn", "cva", "cx"],
 };
