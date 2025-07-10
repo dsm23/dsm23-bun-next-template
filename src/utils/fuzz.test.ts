@@ -24,7 +24,7 @@ describe("utils", () => {
           }
 
           expect(cn("px-2 py-1", "px-4", className)).toBe(
-            `py-1 px-4 ${className.trim()}`,
+            `py-1 px-4 ${className.trim().replace(/\s{2,}/g, " ")}`,
           );
         }),
       );
