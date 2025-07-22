@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
     "start": "next start",
     "fmt": "prettier . --write --cache --cache-strategy=content --cache-location=.prettiercache",
     "fmt.check": "prettier . --check --cache --cache-strategy=content --cache-location=.prettiercache",
