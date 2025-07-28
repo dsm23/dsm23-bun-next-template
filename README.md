@@ -1,3 +1,9 @@
+# Bun next template
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ossf/scorecard/badge)](https://scorecard.dev/viewer/?uri=github.com/dsm23/dsm23-bun-next-template)
+[![build](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml)
+[![CodeQL](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/codeql.yml)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
