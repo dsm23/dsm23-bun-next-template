@@ -1,8 +1,13 @@
 # Bun next template
 
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ossf/scorecard/badge)](https://scorecard.dev/viewer/?uri=github.com/dsm23/dsm23-bun-next-template)
-[![build](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dsm23/dsm23-bun-next-template/badge)](https://scorecard.dev/viewer/?uri=github.com/dsm23/dsm23-bun-next-template)
+[![Build](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/build.yml)
 [![CodeQL](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/codeql.yml)
+[![Dependency Review](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/dependency-review.yml)
+[![Docker image build](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/docker.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/docker.yml)
+[![Gitleaks](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/gitleaks.yml)
+[![Renovate](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/renovate.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/renovate.yml)
+[![Zizmor](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/zizmor.yml/badge.svg)](https://github.com/dsm23/dsm23-bun-next-template/actions/workflows/zizmor.yml)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
