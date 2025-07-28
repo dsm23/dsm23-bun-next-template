@@ -16,6 +16,7 @@ pull_request_rules:
       - check-success=playwright-tests
       - check-success=pr-title
       - check-success=renovate
+      - check-success=scorecard
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
@@ -39,6 +40,7 @@ pull_request_rules:
       - check-success=playwright-tests
       - check-success=pr-title
       - check-success=renovate
+      - check-success=scorecard
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
@@ -62,6 +64,7 @@ pull_request_rules:
       - check-success=playwright-tests
       - check-success=pr-title
       - check-success=renovate
+      - check-success=scorecard
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
