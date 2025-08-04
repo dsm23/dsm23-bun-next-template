@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const PORT = process.env.PORT ?? "3000";
+const portDev = 3000;
+const portProd = 3001;
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -8,35 +9,74 @@ const PORT = process.env.PORT ?? "3000";
 export default defineConfig({
   testDir: "./playwright-tests",
   fullyParallel: true,
-  forbidOnly: Boolean(process.env.CI),
+  forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: "html",
   use: {
-    baseURL: `http://127.0.0.1:${PORT}`,
-
     trace: "on-first-retry",
   },
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "chromium-dev",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: `http://localhost:${portDev}`,
+      },
     },
 
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: "firefox-dev",
+      use: {
+        ...devices["Desktop Firefox"],
+        baseURL: `http://localhost:${portDev}`,
+      },
     },
 
     {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      name: "webkit-dev",
+      use: {
+        ...devices["Desktop Safari"],
+        baseURL: `http://localhost:${portDev}`,
+      },
+    },
+
+    {
+      name: "chromium-prod",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: `http://localhost:${portProd}`,
+      },
+    },
+
+    {
+      name: "firefox-prod",
+      use: {
+        ...devices["Desktop Firefox"],
+        baseURL: `http://localhost:${portProd}`,
+      },
+    },
+
+    {
+      name: "webkit-prod",
+      use: {
+        ...devices["Desktop Safari"],
+        baseURL: `http://localhost:${portProd}`,
+      },
     },
   ],
 
-  webServer: {
-    command: "bun run dev",
-    url: `http://127.0.0.1:${PORT}`,
-    reuseExistingServer: !process.env.CI,
-  },
+  /* Run your local dev server before starting the tests */
+  webServer: [
+    {
+      command: `bun run build && bun run start --port ${portProd}`,
+      url: `http://localhost:${portProd}`,
+      reuseExistingServer: !process.env.CI,
+    },
+    {
+      command: `bun run dev --port ${portDev}`,
+      url: `http://localhost:${portDev}`,
+      reuseExistingServer: !process.env.CI,
+    },
+  ],
 });
