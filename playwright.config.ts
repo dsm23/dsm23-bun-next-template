@@ -1,7 +1,29 @@
+import fs from "node:fs";
+import path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
 
 const portDev = 3000;
 const portProd = 3001;
+
+const injectFromEnvFile = () => {
+  const envDir = ".";
+  const envFiles = [
+    /** default file */ `.env`,
+    /** local file */ `.env.local`,
+    /** mode file */ `.env.playwright`,
+    /** mode local file */ `.env.playwright.local`,
+  ];
+
+  envFiles.forEach((file) => {
+    const filePath = path.join(envDir, file);
+    if (fs.existsSync(filePath)) {
+      dotenv.config({ path: filePath });
+    }
+  });
+};
+
+injectFromEnvFile();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
