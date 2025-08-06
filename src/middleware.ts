@@ -8,7 +8,11 @@ export function middleware(request: NextRequest) {
     script-src 'self' 'nonce-${nonce}'${
       process.env.NODE_ENV === "production" ? "" : " 'unsafe-eval'"
     };
-    style-src 'self' 'unsafe-inline';
+    style-src 'self' ${
+      process.env.NODE_ENV === "production"
+        ? `'nonce-${nonce}'`
+        : "'unsafe-inline'"
+    };
     img-src 'self' blob: data:;
     font-src 'self';
     object-src 'none';
