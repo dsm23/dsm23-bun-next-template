@@ -23,7 +23,7 @@
     "@opentelemetry/sdk-node": "0.203.0",
     "@opentelemetry/sdk-trace-node": "2.0.1",
     "@opentelemetry/semantic-conventions": "1.36.0",
-    "@radix-ui/react-dropdown-menu": "2.1.15",
+    "@radix-ui/react-dropdown-menu": "2.1.16",
     "@radix-ui/react-slot": "1.2.3",
     "@vercel/otel": "1.13.0",
     "class-variance-authority": "0.7.1",
