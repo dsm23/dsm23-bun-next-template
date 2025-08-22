@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  typedRoutes: true,
   output: "standalone",
   async rewrites() {
     return await [
