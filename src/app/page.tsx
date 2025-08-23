@@ -1,3 +1,4 @@
+import type { FunctionComponent } from "react";
 import type { Metadata } from "next";
 import { Button } from "~/components/button";
 
@@ -452,7 +453,7 @@ const LP_GRID_ITEMS = [
   },
 ];
 
-const HomePage = () => (
+const HomePage: FunctionComponent<PageProps<"/">> = () => (
   <main>
     <h1 className="sr-only">Delete this</h1>
 

@@ -1,4 +1,4 @@
-import type { FunctionComponent, PropsWithChildren } from "react";
+import type { FunctionComponent } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
 import { ThemeProvider } from "~/components/theme-provider";
@@ -12,7 +12,7 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const RootLayout: FunctionComponent<PropsWithChildren> = async ({
+const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
   children,
 }) => {
   const headersList = await headers();
