@@ -43,6 +43,7 @@
       "groupName": "playwright monorepo",
       "matchPackageNames": [
         "playwright",
+        "playwright-core",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
       ]
