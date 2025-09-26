@@ -22,7 +22,9 @@ test("should not have any automatically detectable accessibility issues", async 
 }) => {
   await page.goto("/");
 
-  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  const accessibilityScanResults = await new AxeBuilder({
+    page,
+  }).analyze();
 
   expect(accessibilityScanResults.violations).toEqual([]);
 });
