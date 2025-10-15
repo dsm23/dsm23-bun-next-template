@@ -9,12 +9,13 @@ on:
       - "**"
 
 permissions:
-  contents: read
+  contents: none
 
 jobs:
   zizmor:
     runs-on: ubuntu-24.04
     permissions:
+      contents: read
       security-events: write
       # required for workflows in private repositories
       actions: read
