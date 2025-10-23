@@ -6,7 +6,6 @@
     "group:jsUnitTest",
     "group:vite",
     "helpers:pinGitHubActionDigestsToSemver",
-    "security:minimumReleaseAgeNpm",
     "security:openssf-scorecard",
     ":approveMajorUpdates",
     ":configMigration",
@@ -75,6 +74,9 @@
       "matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
     }
   ],
+  "bun": {
+    "minimumReleaseAge": "3 days"
+  },
   "patch": {
     "rebaseWhen": "behind-base-branch"
   },
