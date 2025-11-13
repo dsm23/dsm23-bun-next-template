@@ -1,4 +1,3 @@
-import withBundleAnalyzer from "@next/bundle-analyzer";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -11,11 +10,6 @@ const nextConfig: NextConfig = {
             exclude: ["error", "warn"],
           },
         },
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
   typedRoutes: true,
   output: "standalone",
   async rewrites() {
@@ -28,16 +22,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-const fn = () => {
-  const plugins = [
-    withBundleAnalyzer({ enabled: Boolean(process.env.ANALYZE) }),
-  ];
-
-  const config = plugins.reduce((acc, next) => next(acc), {
-    ...nextConfig,
-  });
-
-  return config;
-};
-
-export default fn;
+export default nextConfig;

@@ -28,7 +28,7 @@ export default defineConfig(
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
       reactHooks.configs.flat["recommended-latest"],
-      next.flatConfig.coreWebVitals,
+      next.configs["core-web-vitals"],
       storybook.configs["flat/recommended"],
     ],
     languageOptions: {
