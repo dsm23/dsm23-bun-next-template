@@ -57,7 +57,8 @@
         "playwright",
         "playwright-core",
         "@playwright/test",
-        "mcr.microsoft.com/playwright"
+        "mcr.microsoft.com/playwright",
+        "gwennlbh/playwright-bun"
       ]
     },
     {
