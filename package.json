@@ -60,8 +60,8 @@
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
-    "@vitest/browser-playwright": "4.0.13",
-    "@vitest/coverage-v8": "4.0.13",
+    "@vitest/browser-playwright": "4.0.14",
+    "@vitest/coverage-v8": "4.0.14",
     "dotenv": "17.2.3",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
@@ -89,7 +89,7 @@
     "typed-query-selector": "2.12.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.48.0",
-    "vitest": "4.0.13"
+    "vitest": "4.0.14"
   },
   "overrides": {
     "@types/react": "19.2.7",
