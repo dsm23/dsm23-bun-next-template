@@ -55,7 +55,7 @@ export default defineConfig({
       use: { ...devices["Desktop Safari"] },
     },
   ],
-
+  tag: "@dev",
   webServer: {
     command: "bun run dev",
     url: `http://localhost:${PORT}`,

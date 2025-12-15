@@ -34,8 +34,7 @@ export default defineConfig({
     ...config.use,
     baseURL: `http://localhost:${PORT}`,
   },
-
-  /* Run your local dev server before starting the tests */
+  tag: "@prod",
   webServer: {
     command: `bun run build \\
         && ln -s "$(pwd)/public" .next/standalone \\
