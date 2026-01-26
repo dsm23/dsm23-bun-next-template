@@ -1,81 +1,52 @@
+shared:
+  common: &common_checks
+    - check-success = amd64
+    - check-success = build
+    - check-success = codeql (actions)
+    - check-success = codeql (javascript)
+    - check-success = codeql (typescript)
+    - check-success = dependency-review
+    - check-success = format
+    - check-success = gitleaks
+    - check-success = lint
+    - check-success = playwright-tests
+    - check-success = pr-title
+    - check-success = renovate
+    - check-success = smoke-test
+    - check-success = types
+    - check-success = unit-testing
+    - check-success = zizmor
+    - or:
+        - check-success = renovate/stability-days
+        - check-pending != renovate/stability-days
+
 pull_request_rules:
-  # approve
   - name: automatic approval
     conditions:
-      - author=dsm23
-      - check-success=amd64
-      - check-success=build
-      - check-success=codeql (actions)
-      - check-success=codeql (javascript)
-      - check-success=codeql (typescript)
-      - check-success=dependency-review
-      - check-success=format
-      - check-success=gitleaks
-      - check-success=lint
-      - check-success=playwright-tests
-      - check-success=pr-title
-      - check-success=renovate
-      - check-success=smoke-test
-      - check-success=types
-      - check-success=unit-testing
-      - check-success=zizmor
+      - author != renovate[bot]
+      - and: *common_checks
     actions:
       review:
         type: APPROVE
-        message: Automatically approving dsm23
+        message: "Automatically approving {{ author }}"
+
   - name: automatic approval for Renovate pull requests
     conditions:
-      - author=renovate[bot]
-      - check-success=amd64
-      - check-success=build
-      - check-success=codeql (actions)
-      - check-success=codeql (javascript)
-      - check-success=codeql (typescript)
-      - check-success=dependency-review
-      - check-success=format
-      - check-success=gitleaks
-      - check-success=lint
-      - check-success=playwright-tests
-      - check-success=pr-title
-      - check-success=renovate
-      - check-success=smoke-test
-      - check-success=types
-      - check-success=unit-testing
-      - check-success=zizmor
-      - or:
-          - check-success=renovate/stability-days
-          - check-pending!=renovate/stability-days
+      - author = renovate[bot]
+      - and: *common_checks
     actions:
       review:
         type: APPROVE
         message: Automatically approving renovate
-  # merge
+
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
-      - check-success=amd64
-      - check-success=build
-      - check-success=codeql (actions)
-      - check-success=codeql (javascript)
-      - check-success=codeql (typescript)
-      - check-success=dependency-review
-      - check-success=format
-      - check-success=gitleaks
-      - check-success=lint
-      - check-success=playwright-tests
-      - check-success=pr-title
-      - check-success=renovate
-      - check-success=smoke-test
-      - check-success=types
-      - check-success=unit-testing
-      - check-success=zizmor
-      - "#approved-reviews-by>=1"
-      - or:
-          - check-success=renovate/stability-days
-          - check-pending!=renovate/stability-days
+      - author != renovate[bot]
+      - and: *common_checks
     actions:
       merge:
         method: merge
-  # delete
+
   - name: automatic deletion of head branch after merge
     conditions:
       - merged
