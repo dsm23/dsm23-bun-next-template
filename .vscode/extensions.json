@@ -3,12 +3,12 @@
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
-    "esbenp.prettier-vscode",
     "exiasr.hadolint",
     "jasonnutter.vscode-codeowners",
     "joshbolduc.commitlint",
     "ms-azuretools.vscode-containers",
     "ms-playwright.playwright",
+    "oxc.oxc-vscode",
     "stylelint.vscode-stylelint",
     "unifiedjs.vscode-mdx"
   ],
