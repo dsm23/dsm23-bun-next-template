@@ -1,5 +1,5 @@
-import next from "@next/eslint-plugin-next";
 import js from "@eslint/js";
+import next from "@next/eslint-plugin-next";
 import prettier from "eslint-config-prettier";
 import * as mdx from "eslint-plugin-mdx";
 import react from "eslint-plugin-react";

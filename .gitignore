@@ -47,7 +47,6 @@ yarn-error.log*
 .eslintcache
 .eslintmdcache
 .stylelintcache
-.prettiercache
 
 # env files (can opt-in for committing if needed)
 .env*
