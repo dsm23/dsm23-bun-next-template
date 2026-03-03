@@ -26,11 +26,11 @@ const ThemeSwitcher = () => {
         <Button variant="ghost" size="sm">
           <span className="sr-only">Theme switcher</span>
           {theme === "light" ? (
-            <Sun key="light" className="text-muted-foreground size-4" />
+            <Sun key="light" className="size-4 text-muted-foreground" />
           ) : theme === "dark" ? (
-            <Moon key="dark" className="text-muted-foreground size-4" />
+            <Moon key="dark" className="size-4 text-muted-foreground" />
           ) : (
-            <Laptop key="system" className="text-muted-foreground size-4" />
+            <Laptop key="system" className="size-4 text-muted-foreground" />
           )}
         </Button>
       </DropdownMenuTrigger>
@@ -40,13 +40,13 @@ const ThemeSwitcher = () => {
           onValueChange={(e) => setTheme(e)}
         >
           <DropdownMenuRadioItem className="flex gap-2" value="light">
-            <Sun className="text-muted-foreground size-4" /> <span>Light</span>
+            <Sun className="size-4 text-muted-foreground" /> <span>Light</span>
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem className="flex gap-2" value="dark">
-            <Moon className="text-muted-foreground size-4" /> <span>Dark</span>
+            <Moon className="size-4 text-muted-foreground" /> <span>Dark</span>
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem className="flex gap-2" value="system">
-            <Laptop className="text-muted-foreground size-4" />{" "}
+            <Laptop className="size-4 text-muted-foreground" />{" "}
             <span>System</span>
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
