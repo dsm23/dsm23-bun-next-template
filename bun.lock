@@ -12,7 +12,7 @@
         "@opentelemetry/semantic-conventions": "1.38.0",
         "@radix-ui/react-dropdown-menu": "2.1.16",
         "@radix-ui/react-slot": "1.2.4",
-        "@vercel/otel": "2.1.0",
+        "@vercel/otel": "2.1.1",
         "class-variance-authority": "0.7.1",
         "clsx": "2.1.1",
         "lucide-react": "0.562.0",
@@ -743,7 +743,7 @@
 
     "@typescript-eslint/visitor-keys": ["@typescript-eslint/visitor-keys@8.52.0", "", { "dependencies": { "@typescript-eslint/types": "8.52.0", "eslint-visitor-keys": "^4.2.1" } }, "sha512-ink3/Zofus34nmBsPjow63FP5M7IGff0RKAgqR6+CFpdk22M7aLwC9gOcLGYqr7MczLPzZVERW9hRog3O4n1sQ=="],
 
-    "@vercel/otel": ["@vercel/otel@2.1.0", "", { "peerDependencies": { "@opentelemetry/api": ">=1.9.0 <2.0.0", "@opentelemetry/api-logs": ">=0.200.0 <0.300.0", "@opentelemetry/instrumentation": ">=0.200.0 <0.300.0", "@opentelemetry/resources": ">=2.0.0 <3.0.0", "@opentelemetry/sdk-logs": ">=0.200.0 <0.300.0", "@opentelemetry/sdk-metrics": ">=2.0.0 <3.0.0", "@opentelemetry/sdk-trace-base": ">=2.0.0 <3.0.0" } }, "sha512-Zwu2Cu4t46DzBnY1DQSTxZ4MBLVfYsOjnlWuZuLRWnmVPX+SNrVHbs3ssiJ6uvY1J1JJswor4zSn8mHYxzYeBA=="],
+    "@vercel/otel": ["@vercel/otel@2.1.1", "", { "peerDependencies": { "@opentelemetry/api": ">=1.9.0 <2.0.0", "@opentelemetry/api-logs": ">=0.200.0 <0.300.0", "@opentelemetry/instrumentation": ">=0.200.0 <0.300.0", "@opentelemetry/resources": ">=2.0.0 <3.0.0", "@opentelemetry/sdk-logs": ">=0.200.0 <0.300.0", "@opentelemetry/sdk-metrics": ">=2.0.0 <3.0.0", "@opentelemetry/sdk-trace-base": ">=2.0.0 <3.0.0" } }, "sha512-kQluigvboW0uIQGf2VvJAjnn54Rs4Cv/2XnHXEaniBiKxPecnAeIEOvDi9XIUG4XLaWk1EJURQ3guXhRbD5iXQ=="],
 
     "@vitest/browser": ["@vitest/browser@4.0.16", "", { "dependencies": { "@vitest/mocker": "4.0.16", "@vitest/utils": "4.0.16", "magic-string": "^0.30.21", "pixelmatch": "7.1.0", "pngjs": "^7.0.0", "sirv": "^3.0.2", "tinyrainbow": "^3.0.3", "ws": "^8.18.3" }, "peerDependencies": { "vitest": "4.0.16" } }, "sha512-t4toy8X/YTnjYEPoY0pbDBg3EvDPg1elCDrfc+VupPHwoN/5/FNQ8Z+xBYIaEnOE2vVEyKwqYBzZ9h9rJtZVcg=="],
 
