@@ -71,7 +71,7 @@
     "eslint-plugin-storybook": "10.1.11",
     "eslint-plugin-tailwind-canonical-classes": "1.2.0",
     "fast-check": "4.5.3",
-    "globals": "17.0.0",
+    "globals": "17.4.0",
     "lefthook": "2.0.13",
     "npm-run-all2": "8.0.4",
     "oxfmt": "0.35.0",
