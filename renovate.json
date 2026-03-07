@@ -68,9 +68,6 @@
       "matchPackageNames": ["bun", "@types/bun", "bun-types", "oven/bun"]
     }
   ],
-  "patch": {
-    "rebaseWhen": "behind-base-branch"
-  },
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
 }
