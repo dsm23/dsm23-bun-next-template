@@ -12,8 +12,8 @@ const nextConfig: NextConfig = {
         },
   typedRoutes: true,
   output: "standalone",
-  async rewrites() {
-    return await [
+  rewrites() {
+    return [
       { source: "/healthz", destination: "/api/health" },
       { source: "/api/healthz", destination: "/api/health" },
       { source: "/health", destination: "/api/health" },

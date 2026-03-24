@@ -12,7 +12,7 @@ const meta = {
     variant: "default",
     children: "Button",
     size: "lg",
-    onClick: fn(),
+    onClick: fn<() => void>(),
   },
   argTypes: {
     variant: {
