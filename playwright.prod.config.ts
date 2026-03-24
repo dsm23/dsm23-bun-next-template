@@ -15,12 +15,12 @@ const injectFromEnvFile = () => {
     /** mode local file */ `.env.playwright.local`,
   ];
 
-  envFiles.forEach((file) => {
+  for (const file of envFiles) {
     const filePath = path.join(envDir, file);
     if (fs.existsSync(filePath)) {
       dotenv.config({ path: filePath });
     }
-  });
+  }
 };
 
 injectFromEnvFile();

@@ -2,7 +2,10 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function proxy(request: NextRequest) {
-  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+  const nonce = btoa(
+    String.fromCodePoint(...crypto.getRandomValues(new Uint8Array(16))),
+  );
+
   const cspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}'${
@@ -23,7 +26,7 @@ export function proxy(request: NextRequest) {
 `;
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = cspHeader
-    .replace(/\s{2,}/g, " ")
+    .replaceAll(/\s{2,}/g, " ")
     .trim();
 
   const requestHeaders = new Headers(request.headers);

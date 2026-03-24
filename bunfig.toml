@@ -1,4 +1,4 @@
 [test]
-preload = ["./test-utils/happydom.ts", "./test-utils/testing-library.ts"]
+preload = ["./test-utils/happydom.ts", "./test-utils/testingLibrary.ts"]
 root = "./src"
 coverageThreshold = 0.1

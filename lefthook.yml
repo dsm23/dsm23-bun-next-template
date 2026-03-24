@@ -8,15 +8,13 @@ pre-commit:
       run: ./node_modules/.bin/stylelint --allow-empty-input {staged_files}
       glob: "*.css"
 
-    eslint:
-      run: ./node_modules/.bin/eslint {staged_files}
+    oxlint:
+      run: ./node_modules/.bin/oxlint {staged_files}
       glob:
         - "*.ts"
         - "*.js"
         - "*.tsx"
         - "*.jsx"
-        - "*.md"
-        - "*.mdx"
 
 commit-msg:
   commands:

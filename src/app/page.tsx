@@ -61,7 +61,7 @@ const LP_GRID_ITEMS = [
     ),
   },
   {
-    title: "ESlint & Oxfmt",
+    title: "Oxlint & Oxfmt",
     description: "For clean, consistent, and error-free code.",
     icon: (
       <svg

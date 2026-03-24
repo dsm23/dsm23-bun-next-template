@@ -1,5 +1,5 @@
-/* eslint-disable no-constant-binary-expression */
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
+/* oxlint-disable no-constant-binary-expression */
+/* oxlint-disable typescript/no-unnecessary-condition */
 
 import { describe, expect, it } from "bun:test";
 import { cn } from ".";
