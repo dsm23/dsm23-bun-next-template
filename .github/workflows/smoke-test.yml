@@ -38,6 +38,6 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Smoke & Acceptance tests
-        run: bun run test:smoke --project storybook
+        run: bunx vitest run --project storybook
         env:
           FORCE_COLOR: "1"
