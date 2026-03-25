@@ -12,15 +12,12 @@ on:
 env:
   LEFTHOOK: 0
 
-permissions:
-  contents: none
+permissions: {}
 
 jobs:
   playwright-test-shard:
     timeout-minutes: 60
     runs-on: ubuntu-24.04
-    permissions:
-      contents: read
     strategy:
       fail-fast: false
       matrix:

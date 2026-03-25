@@ -19,15 +19,12 @@ on:
     branches:
       - main
 
-permissions:
-  contents: none
+permissions: {}
 
 jobs:
   codeql:
     runs-on: ubuntu-24.04
     permissions:
-      actions: read
-      contents: read
       security-events: write
 
     strategy:
