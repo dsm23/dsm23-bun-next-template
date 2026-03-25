@@ -7,10 +7,7 @@ import { cn } from "~/utils";
 
 import "./globals.css";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
   children,
@@ -19,11 +16,16 @@ const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
   const nonce = headersList.get("x-nonce") ?? undefined;
 
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html
+      lang="en"
+      dir="ltr"
+      suppressHydrationWarning
+      className={cn("font-sans", inter.variable)}
+    >
       <body
         className={cn(
           "min-h-dvh bg-background font-sans antialiased",
-          fontSans.variable,
+          inter.variable,
         )}
       >
         <ThemeProvider

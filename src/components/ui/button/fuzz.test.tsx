@@ -2,7 +2,7 @@ import { describe, expect, it } from "bun:test";
 import crypto from "node:crypto";
 import { render, screen } from "@testing-library/react";
 import fc from "fast-check";
-import { Button } from ".";
+import { Button, buttonVariants } from ".";
 
 describe("component", () => {
   describe("Button", () => {
@@ -27,11 +27,9 @@ describe("component", () => {
           const id = crypto.randomUUID();
 
           render(
-            <Button asChild>
-              <a href={href} data-testid={id}>
-                {linkText}
-              </a>
-            </Button>,
+            <a href={href} className={buttonVariants()} data-testid={id}>
+              {linkText}
+            </a>,
           );
 
           expect(screen.getByTestId(id)).toBeInTheDocument();

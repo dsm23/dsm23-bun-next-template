@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 import type { Metadata } from "next";
-import { Button } from "~/components/button";
+import { buttonVariants } from "~/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -286,7 +286,7 @@ const LP_GRID_ITEMS = [
     ),
   },
   {
-    title: "Radix UI",
+    title: "Base UI",
     description: "Headless UI components for endless customization.",
     icon: (
       <svg
@@ -469,19 +469,22 @@ const HomePage: FunctionComponent<PageProps<"/">> = () => (
             development, AI-powered code reviews, and an extensive suite of
             tools for a smooth and enjoyable development process.
           </p>
-          <Button asChild>
-            <a
-              href="https://github.com/dsm23/dsm23-next-template"
-              className="mr-3"
-            >
-              Get started
-            </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/">
-              Deploy Now
-            </a>
-          </Button>
+
+          <a
+            href="https://github.com/dsm23/dsm23-next-template"
+            className={buttonVariants({ className: "mr-3" })}
+          >
+            Get started
+          </a>
+
+          <a
+            href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/"
+            className={buttonVariants({
+              variant: "outline",
+            })}
+          >
+            Deploy Now
+          </a>
         </div>
       </div>
     </section>

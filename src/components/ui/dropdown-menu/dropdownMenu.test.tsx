@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 import { afterEach, describe, expect, it } from "bun:test";
-import { cleanup, render, screen } from "@testing-library/react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { Options } from "@testing-library/user-event";
 import {
@@ -97,9 +97,11 @@ describe("DropdownMenu components", () => {
       <DropdownMenu>
         <DropdownMenuTrigger>Options</DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuLabel>Label</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Item 1</DropdownMenuItem>
+          <DropdownMenuGroup>
+            <DropdownMenuLabel>Label</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Item 1</DropdownMenuItem>
+          </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>,
     );
@@ -151,21 +153,23 @@ describe("DropdownMenu components", () => {
       <DropdownMenu>
         <DropdownMenuTrigger>Options</DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
           <DropdownMenuGroup>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>
                 <span>Second trigger</span>
               </DropdownMenuSubTrigger>
               <DropdownMenuPortal>
                 <DropdownMenuSubContent>
-                  <DropdownMenuItem>
-                    <span>Item One</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <span>Item Two</span>
-                  </DropdownMenuItem>
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                      <span>Item One</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <span>Item Two</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
                 </DropdownMenuSubContent>
               </DropdownMenuPortal>
             </DropdownMenuSub>
@@ -181,8 +185,12 @@ describe("DropdownMenu components", () => {
 
     await user.click(screen.getByText("Second trigger"));
 
-    expect(screen.getByText("Item One")).toBeInTheDocument();
-    expect(screen.getByText("Item Two")).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByText("Item One")).toBeInTheDocument(),
+    );
+    await waitFor(() =>
+      expect(screen.getByText("Item Two")).toBeInTheDocument(),
+    );
 
     // move cursor away from SubTrigger
     await user.click(screen.getByText("My Account"));
