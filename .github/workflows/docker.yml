@@ -14,14 +14,12 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
-permissions:
-  contents: none
+permissions: {}
 
 jobs:
   amd64:
     runs-on: ubuntu-24.04
     permissions:
-      contents: read
       packages: write
     steps:
       - name: Harden Runner
