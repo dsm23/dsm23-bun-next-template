@@ -54,4 +54,4 @@ const Button: FunctionComponent<Props> = ({
 
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { Button };
