@@ -47,7 +47,7 @@
         "dotenv": "17.3.1",
         "eslint-plugin-react-dom": "3.0.0",
         "eslint-plugin-storybook": "10.3.3",
-        "eslint-plugin-tailwind-canonical-classes": "1.3.1",
+        "eslint-plugin-tailwind-canonical-classes": "1.3.2",
         "fast-check": "4.6.0",
         "knip": "6.1.0",
         "lefthook": "2.1.4",
@@ -1084,7 +1084,7 @@
 
     "eslint-plugin-storybook": ["eslint-plugin-storybook@10.3.3", "", { "dependencies": { "@typescript-eslint/utils": "^8.48.0" }, "peerDependencies": { "eslint": ">=8", "storybook": "^10.3.3" } }, "sha512-jo8wZvKaJlxxrNvf4hCsROJP3CdlpaLiYewAs5Ww+PJxCrLelIi5XVHWOAgBvvr3H9WDKvUw8xuvqPYqAlpkFg=="],
 
-    "eslint-plugin-tailwind-canonical-classes": ["eslint-plugin-tailwind-canonical-classes@1.3.1", "", { "dependencies": { "@tailwindcss/node": "^4.0.0", "synckit": "^0.9.3" }, "peerDependencies": { "eslint": "^8.0.0 || ^9.0.0 || ^10.0.0" } }, "sha512-j4gaGbxR8HkZ/NAGDhLq20nQsU+lkuu9a0OQQEzg8GFLWc+I5lfXKZFASikj5DzFYzC6gbkbU+h5AlVvOLV6Yg=="],
+    "eslint-plugin-tailwind-canonical-classes": ["eslint-plugin-tailwind-canonical-classes@1.3.2", "", { "dependencies": { "@tailwindcss/node": "^4.0.0", "synckit": "^0.9.3" }, "peerDependencies": { "eslint": "^8.0.0 || ^9.0.0 || ^10.0.0" } }, "sha512-9K7J8jXQVjITQP2d0vVbHL5e3Zmx3vDPq20P+0MynovsVa7c1GfLXUXZMEr3CuUs4I/MKaPF0H6cMB+B6zVIog=="],
 
     "eslint-scope": ["eslint-scope@8.4.0", "", { "dependencies": { "esrecurse": "^4.3.0", "estraverse": "^5.2.0" } }, "sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg=="],
 
