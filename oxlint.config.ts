@@ -11,10 +11,7 @@ export default defineConfig({
     "typescript",
     "unicorn",
   ],
-  jsPlugins: [
-    "eslint-plugin-react-dom",
-    "eslint-plugin-tailwind-canonical-classes",
-  ],
+  jsPlugins: ["eslint-plugin-tailwind-canonical-classes"],
   categories: {
     correctness: "warn",
     suspicious: "warn",
@@ -68,23 +65,21 @@ export default defineConfig({
       },
     ],
     "no-empty-function": ["warn", { allow: ["arrowFunctions"] }],
-    "no-restricted-syntax": [
-      "warn",
-      {
-        selector:
-          "ImportDeclaration[source.value='react'][specifiers.0.type='ImportDefaultSpecifier']",
-        message:
-          "Default React import not allowed since we use the TypeScript jsx-transform. If you need a global type that collides with a React named export (such as `MouseEvent`), try using `globalThis.MouseHandler`",
-      },
-      {
-        selector:
-          "ImportDeclaration[source.value='react'] :matches(ImportNamespaceSpecifier)",
-        message:
-          "Named * React import is not allowed. Please import what you need from React with Named Imports",
-      },
-    ],
     "no-negated-condition": "off",
     "no-optional-chaining": "off",
+    "no-restricted-imports": [
+      "warn",
+      {
+        paths: [
+          {
+            name: "react",
+            importNames: ["default"],
+            message:
+              "Named * React import is not allowed. Please import what you need from React with Named Imports",
+          },
+        ],
+      },
+    ],
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/anchor-has-content": "off",
     "jsx-a11y/heading-has-content": "off",
@@ -112,18 +107,6 @@ export default defineConfig({
     //   },
     // ],
     "react/react-in-jsx-scope": "off",
-    "react-dom/no-dangerously-set-innerhtml": "warn",
-    "react-dom/no-dangerously-set-innerhtml-with-children": "warn",
-    "react-dom/no-find-dom-node": "warn",
-    "react-dom/no-flush-sync": "warn",
-    "react-dom/no-hydrate": "warn",
-    "react-dom/no-namespace": "warn",
-    "react-dom/no-render": "warn",
-    "react-dom/no-render-return-value": "warn",
-    "react-dom/no-script-url": "warn",
-    "react-dom/no-unsafe-iframe-sandbox": "warn",
-    "react-dom/no-use-form-state": "warn",
-    "react-dom/no-void-elements-with-children": "warn",
     "tailwind-canonical-classes/tailwind-canonical-classes": [
       "warn",
       {

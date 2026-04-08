@@ -4,7 +4,6 @@ const config: KnipConfig = {
   tags: ["-knipignore"],
   entry: ["src/**/*.d.ts"],
   ignoreDependencies: [
-    "eslint-plugin-react-dom",
     "eslint-plugin-storybook",
     "eslint-plugin-tailwind-canonical-classes",
   ],
