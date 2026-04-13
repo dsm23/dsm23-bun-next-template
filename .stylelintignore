@@ -5,11 +5,8 @@ dist
 # Public Folder
 public
 
-# Jest
+# Bun test runner
 coverage
 
 # Storybook
 storybook-static
-
-# Old Styles
-styles/old
