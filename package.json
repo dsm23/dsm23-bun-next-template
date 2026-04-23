@@ -19,7 +19,7 @@
     "knip:hack": "bun test"
   },
   "dependencies": {
-    "@base-ui/react": "1.4.0",
+    "@base-ui/react": "1.4.1",
     "@opentelemetry/exporter-trace-otlp-http": "0.215.0",
     "@opentelemetry/resources": "2.7.0",
     "@opentelemetry/sdk-node": "0.215.0",
