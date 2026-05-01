@@ -65,7 +65,7 @@
     "knip": "6.7.0",
     "lefthook": "2.1.6",
     "npm-run-all2": "8.0.4",
-    "oxfmt": "0.46.0",
+    "oxfmt": "0.47.0",
     "oxlint": "1.61.0",
     "oxlint-tsgolint": "0.22.1",
     "postcss": "8.5.12",
