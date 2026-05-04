@@ -21,12 +21,10 @@ export default defineConfig({
     nursery: "warn",
   },
   env: {
-    builtin: true,
     browser: true,
+    node: true,
     serviceworker: true,
-  },
-  globals: {
-    process: "readonly",
+    worker: true,
   },
   ignorePatterns: [
     ".next/**",
@@ -86,6 +84,7 @@ export default defineConfig({
     "oxc/no-async-await": "off",
     "oxc/no-rest-spread-properties": "off",
     "react/button-has-type": "off",
+    "react/forbid-component-props": "off",
     // TODO: remove when it supports tsx
     "react/jsx-filename-extension": "off",
     "react/no-multi-comp": "off",
