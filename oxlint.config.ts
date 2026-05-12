@@ -132,6 +132,7 @@ export default defineConfig({
         case: "camelCase",
       },
     ],
+    "unicorn/no-negated-condition": "off",
     "vitest/consistent-vitest-vi": "warn",
     "vitest/no-importing-vitest-globals": "warn",
   },

@@ -14,7 +14,7 @@ const checkFavicon = async ({ page }: Pick<PlaywrightTestArgs, "page">) => {
     const contentType = response.headers()["content-type"];
 
     const faviconMimeRegex =
-      /^image\/(x-icon|vnd\.microsoft\.icon|png|svg\+xml|gif|jpeg)$/;
+      /^image\/(x-icon|vnd\.microsoft\.icon|png|svg\+xml|gif|jpeg)$/v;
 
     expect(response.ok()).toBe(true);
     expect(contentType).toMatch(faviconMimeRegex);

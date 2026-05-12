@@ -26,7 +26,7 @@ export function proxy(request: NextRequest) {
 `;
   // Replace newline characters and spaces
   const contentSecurityPolicyHeaderValue = cspHeader
-    .replaceAll(/\s{2,}/g, " ")
+    .replaceAll(/\s{2,}/gv, " ")
     .trim();
 
   const requestHeaders = new Headers(request.headers);

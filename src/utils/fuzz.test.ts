@@ -12,7 +12,7 @@ describe("utils", () => {
           }
 
           expect(cn(className)).toBe(
-            className.trim().replaceAll(/\s{2,}/g, " "),
+            className.trim().replaceAll(/\s{2,}/gv, " "),
           );
         }),
       );
@@ -26,7 +26,7 @@ describe("utils", () => {
           }
 
           expect(cn("px-2 py-1", "px-4", className)).toBe(
-            `py-1 px-4 ${className.trim().replaceAll(/\s{2,}/g, " ")}`,
+            `py-1 px-4 ${className.trim().replaceAll(/\s{2,}/gv, " ")}`,
           );
         }),
       );
