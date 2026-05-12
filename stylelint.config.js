@@ -20,13 +20,13 @@ const CUSTOM_AT_RULES = [
 // Enforces certain selectors to be only in kebab-case notation
 // We use these for id selectors and classname selectors
 const ONLY_ALLOW_KEBAB_CASE_SELECTORS = [
-  /^(?:[a-z]+(?:-[a-z]+)*)$/,
+  /^(?:[a-z]+(?:-[a-z]+)*)$/v,
   { message: (s) => `Expected '${s}' to be in kebab-case` },
 ];
 
 // Enforces certain selectors to be camelCase in module.css files
 const ONLY_ALLOW_CAMELCASE_SELECTORS = [
-  /^[a-z]+([A-Z][a-z]*)*$/,
+  /^[a-z]+([A-Z][a-z]*)*$/v,
   { message: (s) => `Expected '${s}' to be in camelCase` },
 ];
 
