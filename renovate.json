@@ -56,6 +56,12 @@
       ]
     },
     {
+      "groupName": "oxlint monorepo",
+      "description": "Oxlint will regularly in non-major updates",
+      "matchPackageNames": ["oxlint"],
+      "schedule": ["* 3-6 * * *"]
+    },
+    {
       "groupName": "playwright monorepo",
       "matchUpdateTypes": ["major", "minor"],
       "matchPackageNames": [
@@ -64,7 +70,8 @@
         "@playwright/test",
         "mcr.microsoft.com/playwright",
         "gwennlbh/playwright-bun"
-      ]
+      ],
+      "schedule": ["* 3-6 * * *"]
     }
   ],
   "rebaseWhen": "conflicted",

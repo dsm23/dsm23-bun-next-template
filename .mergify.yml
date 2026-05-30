@@ -48,6 +48,7 @@ queue_rules:
     batch_max_wait_time: 5 min
     queue_conditions: &queue_conditions
       - author = renovate[bot]
+      - head != renovate/all-non-major
       - "#approved-reviews-by >= 1"
       - and: *common_checks
     merge_conditions:
@@ -64,9 +65,11 @@ pull_request_rules:
 
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
-      - author != renovate[bot]
       - "#approved-reviews-by >= 1"
       - and: *common_checks
+      - or:
+          - author != renovate[bot]
+          - head = renovate/all-non-major
     actions:
       merge:
         method: merge
@@ -74,6 +77,7 @@ pull_request_rules:
   - name: Automatically queue Renovate PRs
     conditions:
       - author = renovate[bot]
+      - head != renovate/all-non-major
     actions:
       queue:
 
