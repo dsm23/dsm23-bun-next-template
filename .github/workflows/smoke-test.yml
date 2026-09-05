@@ -18,7 +18,7 @@ jobs:
   smoke-test:
     runs-on: ubuntu-latest
     container:
-      image: gwennlbh/playwright-bun:v1.60.0@sha256:da01034f9dfdc3e3d809d047ee003478beef9bd9d594e7f75ed1ed4224a4c408
+      image: gwennlbh/playwright-bun:v1.62.1@sha256:ed174f1e7cad210ef3d1069b86c5ceedf5bb026b57d8edbb9aa4c3ba7394fff0
       options: --user 1001
     steps:
       - name: Git Checkout
